@@ -1,114 +1,160 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero'; // Importing Hero component
+import { useEffect, useState } from 'react';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const typingTexts = [
+  "JavaScript", "Angular", "React", "Vue", "Node.js", 
+  "Java", "PHP", "Git", "Firebase", "MongoDB", "Supabase"
+];
+
+const About = () => {
+  const [currentText, setCurrentText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const type = () => {
+      if (index < typingTexts.length) {
+        setCurrentText((prev) => prev + typingTexts[index].charAt(prev.length));
+        if (currentText.length === typingTexts[index].length) {
+          setTimeout(() => {
+            setIndex((prev) => prev + 1);
+            setCurrentText("");
+          }, 1000);
+        } else {
+          setTimeout(type, 100);
+        }
+      }
+    };
+    type();
+  }, [currentText, index]);
+
+  return (
+    <section id="about" className="py-16 bg-gradient-to-r from-blue-500 to-teal-500 text-center text-white">
+      <h2 className="text-4xl font-bold">About Me</h2>
+      <p className="mt-4 text-lg">
+        I am a passionate full-stack developer with experience in building responsive and user-friendly web applications.
+      </p>
+      <p className="mt-4 text-lg">
+        My tech stack includes: 
+        <span className="font-mono"> {currentText}</span>
+      </p>
+      <p className="mt-2 text-lg">
+        Let's create something amazing together!
+      </p>
+      <a
+        href="/about"
+        className="mt-8 inline-block bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300"
+      >
+        Learn More
+      </a>
+    </section>
+  );
+};
+
+const Projects = () => {
+  const projects = [
+    {
+      title: "Chat Application",
+      imageUrl: "chat.jpg", // Replace with your image path
+      link: "https://ydkm-chatapp.vercel.app/" // Replace with your project link
+    },
+    {
+      title: "Birthday Feedback App",
+      imageUrl: "birthday.jpg", // Replace with your image path
+      link: "https://wish-me-a-happy-birthday-september-04.vercel.app/" // Replace with your project link
+    },
+    {
+      title: "Link Sharing App",
+      imageUrl: "links.jpg", // Replace with your image path
+      link: "https://link-sharing-apps.netlify.app/" // Replace with your project link
+    },
+  ];
+
+  return (
+    <section id="projects" className="py-16 bg-gradient-to-r from-blue-300 to-blue-100 text-center">
+      <h2 className="text-4xl font-bold text-gray-800">My Projects</h2>
+      <p className="mt-4 text-lg text-gray-600">
+        Here are some of the projects I have worked on that showcase my skills and expertise.
+      </p>
+      <div className="mt-8 flex flex-wrap justify-center gap-8">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="max-w-sm rounded overflow-hidden shadow-lg cursor-pointer transform transition duration-300 hover:scale-105"
+            onClick={() => window.open(project.link, '_blank')}
+          >
+            <img className="w-full h-48 object-cover" src={project.imageUrl} alt={project.title} />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">{project.title}</div>
+              <p className="text-gray-700 text-base">
+                Click to view the project.
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <a
+        href="/projects"
+        className="mt-8 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
+      >
+        View All Projects
+      </a>
+    </section>
+  );
+};
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Head>
+        <title>My Portfolio</title>
+        <meta name="description" content="Welcome to my portfolio" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <Hero />
+
+      {/* About Section */}
+      <About />
+
+      {/* Projects Section */}
+      <Projects />
+
+        {/* Skills Section */}
+        <section id="skills" className="py-16 bg-gradient-to-r from-teal-500 to-blue-500 text-center text-white">
+        <h2 className="text-4xl font-bold">My Skills</h2>
+        <p className="mt-4 text-lg">
+          I am proficient in various technologies and tools for full stack web development, Administrative Management, and other tech stacks you might be interested in. Not only am I versatile in Tech, but I also have an outstanding Gospel Music career. Check out my skills.
+        </p>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/skills"
+          className="mt-8 inline-block bg-white text-teal-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          View Skills
         </a>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-gray-200 text-center">
+        <h2 className="text-4xl font-bold text-gray-800">Contact Me</h2>
+        <p className="mt-4 text-lg text-gray-600">
+          I would love to hear from you! Feel free to reach out for any inquiries.
+        </p>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/contact"
+          className="mt-8 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          Get in Touch
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="py-6 bg-gray-800 text-white text-center">
+        <p>&copy; {new Date().getFullYear()} Iniubong Udofot. All rights reserved.</p>
       </footer>
     </div>
   );
