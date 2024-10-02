@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router'; // Import useRouter from Next.js
+import Image from 'next/image'; // Import Image from next/image
 
 const skills = [
   {
@@ -62,6 +63,12 @@ const skills = [
     logo: 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
     link: 'https://www.php.net/',
   },
+  // New Java skill
+  {
+    name: 'Java',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg',
+    link: 'https://www.java.com/',
+  },
 ];
 
 const Skills = () => {
@@ -103,7 +110,13 @@ const Skills = () => {
               key={index}
               className="bg-white rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 p-6 flex flex-col items-center"
             >
-              <img src={skill.logo} alt={`${skill.name} logo`} className="w-20 h-20 object-contain mb-4" />
+              <Image 
+                src={skill.logo} 
+                alt={`${skill.name} logo`} 
+                className="w-20 h-20 object-contain mb-4" 
+                width={80} // Set the desired width
+                height={80} // Set the desired height
+              />
               <h2 className="text-xl font-semibold text-gray-700 mb-2">{skill.name}</h2>
               <a
                 href={skill.link}

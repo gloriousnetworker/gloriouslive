@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar'; // Import the Navbar component
+import Image from 'next/image'; // Import the Image component from Next.js
 
 const projects = [
     {
@@ -26,12 +27,18 @@ const Projects = () => {
 
             <div className="container mx-auto px-4 py-8">
                 <h1 className="text-4xl font-bold mb-4 text-center text-gray-800">My Projects</h1>
-                <p className="mb-8 text-center text-gray-600">Here are some of the projects I've worked on:</p>
+                <p className="mb-8 text-center text-gray-600">Here are some of the projects I&apos;ve worked on:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <a key={index} href={project.link} target="_blank" rel="noopener noreferrer">
                             <div className="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                                <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
+                                <Image
+                                    src={`/${project.imageUrl}`} // Ensure the correct path to the images
+                                    alt={project.title}
+                                    className="w-full h-48 object-cover"
+                                    width={500} // Set the width of the image
+                                    height={300} // Set the height of the image
+                                />
                                 <div className="p-4">
                                     <h2 className="text-lg font-semibold text-gray-800">{project.title}</h2>
                                 </div>
