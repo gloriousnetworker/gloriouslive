@@ -21,10 +21,8 @@ const CvPage = () => {
             style={{
               minHeight: '80vh',
               maxHeight: '80vh',
-              transform: 'scale(0.9)', // Scale down the iframe for small screens
-              transformOrigin: 'top left', // Ensures scaling occurs from the top-left corner
-              width: '100%', // Full width for mobile devices
-              maxWidth: '600px', // Maximum width for larger screens
+              zoom: '0.75', // Scales down the PDF on smaller screens
+              overflow: 'auto', // Enables scrolling within the iframe
             }}
           />
         </div>
@@ -42,15 +40,6 @@ const CvPage = () => {
       <footer className="py-6 bg-gray-800 text-white text-center">
         <p>&copy; {new Date().getFullYear()} Glorious. All rights reserved.</p>
       </footer>
-
-      {/* Custom styles for iPhone-like small screens */}
-      <style jsx>{`
-        @media only screen and (max-width: 375px) {
-          iframe {
-            transform: scale(0.8); /* Further scale down for smaller iPhone screens */
-          }
-        }
-      `}</style>
     </div>
   );
 };
