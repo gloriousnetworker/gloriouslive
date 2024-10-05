@@ -36,24 +36,39 @@ const Contact: React.FC = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value })); // Update form data
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent the default form submission
 
-    // Show the modal message
-    setMessage('Message Sent Successfully to Iniubong Udofot. Thank you for reaching out.');
+    // Send data to the backend
+    try {
+        const response = await fetch('http://localhost:5000/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData), // Send form data
+        });
 
-    // Open the modal
-    setIsModalOpen(true);
-
-    // Show toast notification
-    setShowToast(true);
-    setTimeout(() => {
-      setShowToast(false); // Hide toast notification after 3 seconds
-    }, 3000);
+        if (response.ok) {
+            const data = await response.json();
+            setMessage(data.message); // Set success message
+            setIsModalOpen(true); // Open modal
+            setShowToast(true);
+            setTimeout(() => {
+                setShowToast(false); // Hide toast notification after 3 seconds
+            }, 3000);
+        } else {
+            throw new Error('Failed to send message');
+        }
+    } catch (error) {
+        console.error(error);
+        setMessage('Failed to send message. Please try again later.');
+        setIsModalOpen(true);
+    }
 
     // Reset form data
     setFormData({ name: '', email: '', message: '' });
-  };
+};
 
   const handleCloseModal = () => {
     setIsModalOpen(false); // Close the modal
