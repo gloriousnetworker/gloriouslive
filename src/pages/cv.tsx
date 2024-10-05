@@ -12,7 +12,7 @@ const CvPage = () => {
           src="/RESUME.pdf" // Ensure this matches your file name
           className="w-full h-[80vh] border border-gray-300"
           title="CV"
-          style={{ minHeight: '80vh' }} // Ensures the iframe maintains minimum height
+          style={{ minHeight: '80vh', maxHeight: '80vh' }} // Ensures the iframe maintains min and max height
         />
         <a
           href="/RESUME.pdf" // Ensure this matches your file name
