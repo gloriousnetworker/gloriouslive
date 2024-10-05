@@ -9,14 +9,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 shadow-md sticky top-0 z-50"> {/* Sticky Navbar */}
+    <nav className="bg-blue-600 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-white">
           My Portfolio
         </Link>
-
-        {/* Menu Links for large screens */}
         <div className="space-x-6 hidden md:flex">
           <Link href="/" className="text-white hover:text-blue-300">
             Home
@@ -36,9 +33,12 @@ const Navbar = () => {
           <Link href="/blog" className="text-white hover:text-blue-300">
             Blog
           </Link>
+          {/* Link to the CV page */}
+          <Link href="/cv" className="text-white hover:text-blue-300">
+            CV
+          </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             <svg
@@ -59,7 +59,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Links */}
       {isOpen && (
         <div className="md:hidden bg-blue-600 shadow-md">
           <div className="px-4 py-2 space-y-2">
@@ -80,6 +79,10 @@ const Navbar = () => {
             </Link>
             <Link href="/blog" className="block text-white hover:text-blue-300">
               Blog
+            </Link>
+            {/* Link to the CV page */}
+            <Link href="/cv" className="block text-white hover:text-blue-300">
+              CV
             </Link>
           </div>
         </div>
