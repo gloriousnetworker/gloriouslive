@@ -82,7 +82,7 @@ const Navbar = () => {
             </Link>
             {/* Link to the CV page */}
             <Link href="/cv" className="block text-white hover:text-blue-300">
-              CV
+              Download CV
             </Link>
           </div>
         </div>
