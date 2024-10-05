@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         createdAt: admin.firestore.FieldValue.serverTimestamp(), // Optional timestamp
       });
 
-      return res.status(200).json({ message: "Contact form submitted successfully" });
+      return res.status(200).json({ message: "Contact form submitted successfully to Iniubong Udofot 😊" });
     } catch (error) {
       console.error("Error saving message:", error);
       return res.status(500).json({ message: "Failed to save message. Please try again." });
