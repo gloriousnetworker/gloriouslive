@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="bg-blue-600 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-white">
-          Udofot's Portfolio
+          Udofot&apos;s Portfolio  {/* Escape the apostrophe */}
         </Link>
         <div className="space-x-6 hidden md:flex">
           <Link href="/" className="text-white hover:text-blue-300">
