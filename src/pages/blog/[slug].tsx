@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { FaArrowLeft } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Post {
   title: string;
@@ -46,7 +48,12 @@ const BlogPost: React.FC = () => {
           Back
         </button>
         <h1 className="text-4xl font-bold text-gray-800">{post.title}</h1>
-        <p className="text-gray-600 mt-4 leading-relaxed">{post.content}</p>
+        
+        <div className="prose lg:prose-lg mt-4 text-gray-600">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {post.content}
+          </ReactMarkdown>
+        </div>
 
         <button
           onClick={scrollToTop}
