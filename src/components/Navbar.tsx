@@ -166,9 +166,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
-                  href="/RESUME.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/resume"
                   className="mt-4 px-4 py-3 text-center text-lg font-medium text-white bg-accent rounded-xl hover:bg-accent-light transition-colors"
                 >
                   Resume
