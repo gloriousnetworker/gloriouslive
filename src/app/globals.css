@@ -102,10 +102,20 @@
     display: none !important;
   }
 
-  .resume-page {
+  .resume-page,
+  .proposal-page,
+  .intake-page {
     padding: 0 !important;
     margin: 0 !important;
     min-height: auto !important;
+  }
+
+  .proposal-page input,
+  .intake-page input {
+    border: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
   }
 
   @page {
