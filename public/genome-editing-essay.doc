@@ -1,0 +1,60 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>Genome Editing Essay</title>
+<style>
+  body {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin: 1in;
+    line-height: 2.0;
+    color: #000000;
+  }
+  h1 {
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 24pt;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0.5in;
+    line-height: 2.0;
+  }
+  p.reference-heading {
+    text-indent: 0;
+    font-weight: bold;
+    margin-top: 24pt;
+  }
+  p.reference-entry {
+    text-indent: -0.5in;
+    padding-left: 0.5in;
+    line-height: 2.0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Who Decides Who Gets to Be Healthy?</h1>
+
+<p>What makes this particular debate different from earlier conversations about genetic ethics is who&#8217;s leading it. For the first time, it wasn&#8217;t scientists or politicians driving the discussion &#8212; it was patients: people whose daily lives are shaped by hereditary conditions like cystic fibrosis, cystinosis, and sickle cell disease. A citizens&#8217; jury of 21 individuals, each with lived experience of genetic illness, voted 17 to four in favour of the UK government considering a change in law to permit genome editing of human embryos (Reid-Kelly, 2023). That shift &#8212; from expert-led to patient-led &#8212; is what makes this renewed effort genuinely significant.</p>
+
+<p>The two sides of this debate are both deeply human. On one side, there are families who have watched loved ones suffer through painful, life-limiting conditions; for them, the ability to prevent that suffering before a child is even born feels like an act of love. On the other side are voices &#8212; including from within the jury itself &#8212; who argue that disability is not simply a flaw to be erased. As Professor Jackie Leach Scully warned, &#8220;Not all disability involves suffering and disadvantage, so we should think very carefully about whether altering our genetic makeup for all future generations is what is best for society&#8221; (as cited in Reid-Kelly, 2023). That concern isn&#8217;t small &#8212; it&#8217;s about identity, dignity, and what kind of society we&#8217;re building.</p>
+
+<p>I find myself leaning toward the first camp &#8212; but not without real hesitation. Growing up in Nigeria, sickle cell disease isn&#8217;t an abstract statistic; Nigeria carries one of the highest global burdens of the condition, and I&#8217;ve seen what it does to families up close. I watched a close friend manage painful crises throughout his teenage years &#8212; the hospitalisations; the crushing fatigue; the quiet, steady worry his mother wore like a second skin. If a safe technology had existed that could have prevented that, it would be very hard to argue against it!</p>
+
+<p>But that word &#8212; safe &#8212; leads me to another word that matters just as much: accessible. One of the jurors, Brenda Poku, raised a concern that stayed with me &#8212; that if genome editing becomes available only to those who can afford it, we won&#8217;t eliminate suffering; we&#8217;ll just redistribute it along economic lines. In Nigeria, in most of Africa, in low-income communities worldwide, cutting-edge medical technology rarely arrives on equal terms. That pattern worries me deeply.</p>
+
+<p>So yes, I support exploring this technology; but the governance framework matters just as much as the science itself. Personal choice is important &#8212; but only if that choice is genuinely available to everyone, not just those born into the right postcode or income bracket. The jury got that right: their 15 recommendations weren&#8217;t just about whether to proceed, but how &#8212; with equity, transparency, and the voices of patients at the centre.</p>
+
+<p class="reference-heading">Reference</p>
+
+<p class="reference-entry">Reid-Kelly, A. (2023, February 28). <i>Should we allow genome editing of human embryos?</i> Wellcome Connecting Science. https://bit.ly/42vZ6jA</p>
+
+</body>
+</html>
