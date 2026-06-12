@@ -1,0 +1,65 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>Net Neutrality Essay</title>
+<style>
+  body {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin: 1in;
+    line-height: 2.0;
+    color: #000000;
+  }
+  h1 {
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 24pt;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0.5in;
+    line-height: 2.0;
+  }
+  p.no-indent {
+    text-indent: 0;
+  }
+  p.reference-heading {
+    text-indent: 0;
+    font-weight: bold;
+    margin-top: 24pt;
+  }
+  p.reference-entry {
+    text-indent: -0.5in;
+    padding-left: 0.5in;
+    line-height: 2.0;
+  }
+</style>
+</head>
+<body>
+
+<h1>The Internet Shouldn't Have a Price Tag on Freedom</h1>
+
+<p>When I first read about the federal appeals court striking down net neutrality, my immediate reaction was &#8212; this is bad news, and not just for Americans. As a software engineer and founder of multiple web-based platforms, I've always believed the internet should be a level playing field; the moment that changes, the ripple effects are felt by everyone.</p>
+
+<p>Net neutrality, at its core, is simple: internet service providers (ISPs) should treat all web traffic equally. They shouldn't be able to slow down one website, speed up another, or charge extra for access to specific content. The Sixth Circuit's decision to nullify the FCC's authority to enforce these rules is, in my opinion, a step backward &#8212; not forward (Bowman, 2025).</p>
+
+<p>Here's what concerns me most &#8212; money. Without net neutrality, ISPs like AT&amp;T and Verizon could potentially create &#8220;fast lanes&#8221; for companies that pay more; smaller websites, independent creators, and startups would be left crawling. I run an educational tech platform where I teach beginner developers, and the idea that an ISP could throttle my content or slow down my web applications because I'm not paying a premium is genuinely frightening!</p>
+
+<p>The argument from the opposition is that deregulation &#8220;will lead to more investment, innovation, and competition&#8221; (USTelecom, as cited in Bowman, 2025). I understand that perspective &#8212; but it assumes the market will self-regulate fairly, and historically, that's rarely how internet access has worked. In Nigeria, where I'm based, we already deal with expensive, unreliable internet; watching the world's most powerful economy move away from protecting open internet access doesn't inspire confidence.</p>
+
+<p>What gives me some hope is that state-level protections in California, Washington, and Oregon remain intact. It shows that the fight isn't over &#8212; it's just shifted to a different arena. Congressional action, as outgoing FCC Chair Jessica Rosenworcel urged, may be the only long-term path forward for lasting federal protection.</p>
+
+<p>The internet is no longer a luxury; it's infrastructure. For developers, educators, and entrepreneurs like me, access to a free and open internet is the difference between building something meaningful and being priced out of the game. This decision doesn't just affect Americans &#8212; it sets a tone globally about who the internet is really for.</p>
+
+<p class="reference-heading">Reference</p>
+
+<p class="reference-entry">Bowman, E. (2025, January 3). <i>Net neutrality is struck, ending a long battle to regulate ISPs like public utilities.</i> NPR. https://n.pr/4dTL01p</p>
+
+</body>
+</html>
