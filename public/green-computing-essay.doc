@@ -1,0 +1,62 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>Green Computing Essay</title>
+<style>
+  body {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    margin: 1in;
+    line-height: 2.0;
+    color: #000000;
+  }
+  h1 {
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 24pt;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0.5in;
+    line-height: 2.0;
+  }
+  p.reference-heading {
+    text-indent: 0;
+    font-weight: bold;
+    margin-top: 24pt;
+  }
+  p.reference-entry {
+    text-indent: -0.5in;
+    padding-left: 0.5in;
+    line-height: 2.0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Computing With a Conscience</h1>
+
+<p>Before reading this article, I thought of green computing the way most people think about recycling &#8212; something worth doing, but rarely top of mind. After going through it properly, I now have a clearer picture of what the value system actually involves: it's not just about turning off your laptop at night; it's about rethinking how we design, use, manufacture, and dispose of technology at every level (Safdie, 2023).</p>
+
+<p>The article describes green computing as &#8220;the practice of implementing eco-friendly tactics into the use of computers and their daily functions to correlate to the environmental actions necessary to cultivate greater sustainability.&#8221; That framing resonated with me &#8212; especially the idea that both manufacturers and everyday users share responsibility. It's not a burden placed entirely on corporations; it also falls on the person sitting in front of the screen.</p>
+
+<p>Honestly, my alignment with green computing is a mixed bag. On the positive side, I use a laptop rather than a desktop &#8212; which, as the article points out, is generally the more energy-efficient option. I also build and deploy my applications on cloud-based, serverless platforms like Vercel; this means I'm not running a dedicated physical server at home drawing continuous power. I do set my laptop to sleep mode when I step away &#8212; not always out of environmental awareness, but out of habit.</p>
+
+<p>Where I fall short is more tied to context than choice. I'm based in Nigeria, where the power supply is notoriously unstable; frequent outages mean my laptop is almost always plugged in, which degrades the battery faster and increases overall charging cycles. That cycle &#8212; discharge, recharge, repeat &#8212; is the opposite of what green computing encourages! Buying energy-efficient, refurbished, or eco-certified hardware is also significantly harder here; most devices available locally are older models, and proper e-waste recycling barely exists outside a handful of cities.</p>
+
+<p>The personal challenge I face most is cost. Energy-star rated laptops and sustainably manufactured devices come at a premium that isn't always accessible &#8212; especially when you're building startups from your own pocket. It's not that I disagree with the values; it's that the infrastructure and economics don't always make alignment realistic.</p>
+
+<p>That said, this article reminded me that small choices still count. Enabling sleep mode, extending the lifespan of my current device instead of chasing upgrades, and being more deliberate about shutting down workloads at the end of the day &#8212; these are habits I can build right now, regardless of where I live or what I can afford. Green computing isn't just a tech issue; it's a mindset-shift &#8212; one that I'm still actively working toward.</p>
+
+<p class="reference-heading">Reference</p>
+
+<p class="reference-entry">Safdie, S. (2023, January 13). <i>What is green computing and what does it imply?</i> Greenly. https://bit.ly/495hr9P</p>
+
+</body>
+</html>
